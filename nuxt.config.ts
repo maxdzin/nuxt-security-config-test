@@ -101,24 +101,24 @@ export default defineNuxtConfig({
     },
   },
 
-  // security: {
-  //   headers: {
-  //     contentSecurityPolicy: {
-  //       'img-src': [
-  //         "'self'",
-  //         'data:',
-  //         'https://example.com',
-  //       ],
-  //     },
-  //     crossOriginEmbedderPolicy:
-  //       process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'unsafe-none',
-  //   },
-  //   corsHandler: {
-  //     origin: [process.env.NUXT_PUBLIC_APP_BASE_URL as string],
-  //   },
-  //   rateLimiter: {
-  //     tokensPerInterval: 8,
-  //     interval: 10000,
-  //   },
-  // },
+  security: {
+    headers: {
+      contentSecurityPolicy: {
+        'img-src': [
+          "'self'",
+          'data:',
+          'https://example.com',
+        ],
+      },
+      crossOriginEmbedderPolicy:
+        process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'unsafe-none',
+    },
+    corsHandler: {
+      origin: [process.env.NUXT_PUBLIC_APP_BASE_URL as string],
+    },
+    rateLimiter: {
+      tokensPerInterval: 8,
+      interval: 10000,
+    },
+  },
 })
