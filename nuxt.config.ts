@@ -16,13 +16,13 @@ export default defineNuxtConfig({
     '/custom': {
       security: {
         headers: {
-          contentSecurityPolicy: {
-            // 'frame-ancestors': [
-            //   "'self'",
-            //   'https://example.com',
-            //   'https://www.example.com',
-            // ],
-          },
+          // contentSecurityPolicy: {
+          //   'frame-ancestors': [
+          //     "'self'",
+          //     'https://example.com',
+          //     'https://www.example.com',
+          //   ],
+          // },
         },
       },
     },
