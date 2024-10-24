@@ -13,28 +13,6 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': {
-      security: {
-        headers: {
-          contentSecurityPolicy: {
-            'frame-ancestors': [
-              "'self'",
-            ],
-          },
-        },
-      },
-    },
-    '/test': {
-      security: {
-        headers: {
-          contentSecurityPolicy: {
-            'frame-ancestors': [
-              "'self'",
-            ],
-          },
-        },
-      },
-    },
     '/custom': {
       security: {
         headers: {
