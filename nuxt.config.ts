@@ -22,15 +22,6 @@ export default defineNuxtConfig({
             ],
           },
         },
-        corsHandler: {
-          origin: [
-            process.env.NUXT_PUBLIC_APP_BASE_URL as string,
-          ],
-        },
-        rateLimiter: {
-          tokensPerInterval: 8,
-          interval: 10000,
-        },
       },
     },
     '/test': {
@@ -41,15 +32,6 @@ export default defineNuxtConfig({
               "'self'",
             ],
           },
-        },
-        corsHandler: {
-          origin: [
-            process.env.NUXT_PUBLIC_APP_BASE_URL as string,
-          ],
-        },
-        rateLimiter: {
-          tokensPerInterval: 8,
-          interval: 10000,
         },
       },
     },
@@ -64,38 +46,12 @@ export default defineNuxtConfig({
             ],
           },
         },
-        corsHandler: {
-          origin: [
-            process.env.NUXT_PUBLIC_APP_BASE_URL as string,
-            'https://example.com',
-            'https://www.example.com',
-          ],
-        },
-        rateLimiter: {
-          tokensPerInterval: 8,
-          interval: 10000,
-        },
       },
     },
     '/api/statistics/custom': {
       security: {
         corsHandler: {
           origin: ['https://example.com', 'https://www.example.com'],
-        },
-        rateLimiter: {
-          tokensPerInterval: 8,
-          interval: 10000,
-        },
-      },
-    },
-    '/api/statistics/entries': {
-      security: {
-        corsHandler: {
-          origin: [process.env.NUXT_PUBLIC_APP_BASE_URL as string],
-        },
-        rateLimiter: {
-          tokensPerInterval: 8,
-          interval: 10000,
         },
       },
     },
