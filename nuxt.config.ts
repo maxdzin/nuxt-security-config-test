@@ -15,15 +15,15 @@ export default defineNuxtConfig({
   routeRules: {
     '/custom': {
       security: {
-        headers: {
-          // contentSecurityPolicy: {
-          //   'frame-ancestors': [
-          //     "'self'",
-          //     'https://example.com',
-          //     'https://www.example.com',
-          //   ],
-          // },
-        },
+        // headers: {
+        //   contentSecurityPolicy: {
+        //     'frame-ancestors': [
+        //       "'self'",
+        //       'https://example.com',
+        //       'https://www.example.com',
+        //     ],
+        //   },
+        // },
       },
     },
   },
