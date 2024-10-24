@@ -17,11 +17,11 @@ export default defineNuxtConfig({
       security: {
         headers: {
           contentSecurityPolicy: {
-            'frame-ancestors': [
-              "'self'",
-              'https://example.com',
-              'https://www.example.com',
-            ],
+            // 'frame-ancestors': [
+            //   "'self'",
+            //   'https://example.com',
+            //   'https://www.example.com',
+            // ],
           },
         },
       },
