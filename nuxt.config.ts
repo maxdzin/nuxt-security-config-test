@@ -35,13 +35,13 @@ export default defineNuxtConfig({
     },
     '/test': {
       security: {
-        // headers: {
-        //   contentSecurityPolicy: {
-        //     'frame-ancestors': [
-        //       "'self'",
-        //     ],
-        //   },
-        // },
+        headers: {
+          contentSecurityPolicy: {
+            'frame-ancestors': [
+              "'self'",
+            ],
+          },
+        },
         corsHandler: {
           origin: [
             process.env.NUXT_PUBLIC_APP_BASE_URL as string,
