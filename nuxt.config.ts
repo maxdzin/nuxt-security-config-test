@@ -15,13 +15,14 @@ export default defineNuxtConfig({
   routeRules: {
     '/': {
       security: {
-        // headers: {
-        //   contentSecurityPolicy: {
-        //     'frame-ancestors': [
-        //       "'self'",
-        //     ],
-        //   },
-        // },
+        headers: {
+          contentSecurityPolicy: {
+            'frame-ancestors': [
+              "'self'",
+            ],
+          },
+          referrerPolicy: 'no-referrer',
+        },
         corsHandler: {
           origin: [
             process.env.NUXT_PUBLIC_APP_BASE_URL as string,
@@ -41,6 +42,7 @@ export default defineNuxtConfig({
               "'self'",
             ],
           },
+          referrerPolicy: 'no-referrer',
         },
         corsHandler: {
           origin: [
@@ -55,15 +57,16 @@ export default defineNuxtConfig({
     },
     '/custom': {
       security: {
-        // headers: {
-        //   contentSecurityPolicy: {
-        //     'frame-ancestors': [
-        //       "'self'",
-        //       'https://example.com',
-        //       'https://www.example.com',
-        //     ],
-        //   },
-        // },
+        headers: {
+          contentSecurityPolicy: {
+            'frame-ancestors': [
+              "'self'",
+              'https://example.com',
+              'https://www.example.com',
+            ],
+          },
+          referrerPolicy: 'no-referrer',
+        },
         corsHandler: {
           origin: [
             process.env.NUXT_PUBLIC_APP_BASE_URL as string,
